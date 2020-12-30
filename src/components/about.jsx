@@ -27,6 +27,8 @@ class About extends React.Component {
         { content: "Agile/Scrum" },
         { content: "SQL" },
         { content: "ElasticSearch" },
+        { content: "Node.js" },
+        { content: "npm" },
 
       ],
       about_me: [
@@ -51,6 +53,12 @@ class About extends React.Component {
           Title: "Interests",
           content:
             `I am a programmer by trade, but I also reserve a lot of interest for Fencing, wrestling, martial arts, Video FX and Editing, gaming, the study of the Japanese language, music, and digital illustration. Honestly, I will try almost anything. I love learning and trying new things.`
+        },
+        {
+          id: "About This Site",
+          Title: "About This Site",
+          content:
+            `This site is a pretty boilerplate example of a single-page application built in React. It is hosted in AWS. I have a few things I want to add to this, when I have time.`
         }
       ]
     };
@@ -63,40 +71,19 @@ class About extends React.Component {
           <div className="row">
             <div className="col-sm-12">
               <div className="box-shadow-full">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="row">
-                      <div
-                        className="col-sm-6 col-md-5"
-                        style={{ margin: "0 auto" }}
-                        >
-                        <div
-                          className="about-img"
-                          style={{ textAlign: "center" }}
-                        >
-                          <img
-                            className="img-fluid rounded b-shadow-a"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="">
-                      <div className="title-box-2">
-                        <h5 className="title-left">Some Buzzwords</h5>
-                      </div>
-                        {this.state.skills.map(skill => {
-                          return (
-                            <p className="field" key={uuidv4()}>
-                              <span className="tag">
-                                {skill.content}
-                              </span>
-                            </p>
-                          );
-                        })}
-                    </div>
+              <div className="about-me">
+                  <div className="row">
+                    {this.state.skills.map(skill => {
+                        return (
+                          <p className="field" key={uuidv4()}>
+                            <span className="tag">
+                              {skill.content}
+                            </span>
+                          </p>
+                        );
+                      })}
                   </div>
-                  <div className="col-md-6">
+                  <div className="row">
                     <div className="about-me pt-4 pt-md-0">
                       <div className="title-box-2">
                         <h5 className="title-left">About Me</h5>

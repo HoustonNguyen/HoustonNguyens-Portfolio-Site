@@ -2,7 +2,6 @@ import React from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 //import stock
-import stock from "../img/image1.jpg";
 import LN1 from "../img/portfolioContent/LocalNow/1.png";
 import LN2 from "../img/portfolioContent/LocalNow/2.png";
 import LN3 from "../img/portfolioContent/LocalNow/3.png";
@@ -11,19 +10,22 @@ import LN5 from "../img/portfolioContent/LocalNow/5.png";
 import LN6 from "../img/portfolioContent/LocalNow/6.png";
 import LN7 from "../img/portfolioContent/LocalNow/7.jpg";
 
+import C91 from "../img/portfolioContent/Cloud9Software/1.png";
+import C92 from "../img/portfolioContent/Cloud9Software/2.png";
+
 const PortfolioContents = [
   {
     Title: "Cloud9Software",
     URL: "https://cloud9.software/",
     Description: "Full Suite Practice Management System for Dentists and Orthodontics. Complete MVC5 Web App with MSSQL as data storage. Front-end consisted of pure Javascript and CSS. Alternate app based on Silverlight. Invovled interfacing with hardware like printers and XRay machines",
     Tags: ".NET Framework, C#, MVC5, Entity Framework, Telerik Reporting Services, MSSQL, Javascript, HTML5, CSS",
-    MainImage: stock,
-    Gallery: []
+    MainImage: C91,
+    Gallery: [C92]
   },
   {
     Title: "Local Now",
     URL: "https://localnow.com/",
-    Description: `A React-based web app (Next.js)`,
+    Description: `A React-based web app (Next.js) that served video content, much like Hulu or Netflix. The niche that this fills is that it also offers an ongoing live-reel on the front page. It is supposed to be like TV.`,
     Tags: "React, AWS, S3, Microservices, Lambda, Auth0, MSSQL, ElasticSearch, Entity Framework, Angular",
     MainImage: LN1,
     Gallery: [ LN2, LN3, LN4, LN5, LN6, LN7 ]
