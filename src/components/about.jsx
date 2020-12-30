@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 class About extends React.Component {
   constructor() {
@@ -86,8 +87,8 @@ class About extends React.Component {
                       </div>
                         {this.state.skills.map(skill => {
                           return (
-                            <p class="field">
-                              <span class="tag">
+                            <p className="field" key={uuidv4()}>
+                              <span className="tag">
                                 {skill.content}
                               </span>
                             </p>
@@ -102,7 +103,7 @@ class About extends React.Component {
                       </div>
                       {this.state.about_me.map(content => {
                         return (
-                          <React.Fragment>
+                          <React.Fragment key={uuidv4()}>
                             <h6>{content.Title}</h6>
                             <p className="lead" key={content.id}>
                               {content.content}

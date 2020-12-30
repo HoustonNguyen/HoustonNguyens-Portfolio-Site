@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 //import stock
 import stock from "../img/image1.jpg";
@@ -47,7 +48,7 @@ class Portfolio extends React.Component {
           </div>
           <div className="row">
             {PortfolioContents.map((content) => { return (
-              <div className="col-md-4">
+              <div className="col-md-4" key={uuidv4()}>
                 <div className="work-box">
                   <a href={content.MainImage} data-lightbox="gallery-vmarine">
                     <div className="work-img">
@@ -75,7 +76,7 @@ class Portfolio extends React.Component {
                   </a>
                   {content.Gallery.map((image) => {
                     return (
-                      <a
+                      <a key={uuidv4()}
                         href={image}
                         data-lightbox="gallery-vmarine"
                         style={{ display: "none" }}
