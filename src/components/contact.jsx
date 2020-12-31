@@ -38,6 +38,7 @@ class Contact extends React.Component {
                             <div className="col-md-12 mb-3">
                               <div className="form-group">
                                 <input
+                                  disabled
                                   type="text"
                                   name="name"
                                   className="form-control"
@@ -52,6 +53,7 @@ class Contact extends React.Component {
                             <div className="col-md-12 mb-3">
                               <div className="form-group">
                                 <input
+                                  disabled
                                   type="email"
                                   className="form-control"
                                   name="email"
@@ -66,6 +68,7 @@ class Contact extends React.Component {
                             <div className="col-md-12 mb-3">
                               <div className="form-group">
                                 <input
+                                  disabled
                                   type="text"
                                   className="form-control"
                                   name="subject"
@@ -80,6 +83,7 @@ class Contact extends React.Component {
                             <div className="col-md-12 mb-3">
                               <div className="form-group">
                                 <textarea
+                                  disabled
                                   className="form-control"
                                   name="message"
                                   rows="5"
@@ -91,11 +95,8 @@ class Contact extends React.Component {
                               </div>
                             </div>
                             <div className="col-md-12">
-                              <button
-                                type="submit"
-                                className="button button-a button-big button-rouded"
-                              >
-                                Send Message
+                              <button type="button" className="button button-a button-big button-rouded" disabled={true}>
+                                Not yet implemented
                               </button>
                             </div>
                           </div>

@@ -904,6 +904,20 @@ BUTTON
   border-radius: 5rem;
 }
 
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+button:disabled:hover,
+button[disabled]:hover {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 .btn-lg {
   padding: .5rem 1rem;
   font-size: 1.25rem;
