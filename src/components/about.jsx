@@ -29,6 +29,9 @@ class About extends React.Component {
         { content: "ElasticSearch" },
         { content: "Node.js" },
         { content: "npm" },
+        { content: "NUnit" },
+        { content: "Ninject" },
+        { content: "Unit Testing" },
 
       ],
       about_me: [
