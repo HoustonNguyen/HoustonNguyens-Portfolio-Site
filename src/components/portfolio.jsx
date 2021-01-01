@@ -10,25 +10,49 @@ import LN5 from "../img/portfolioContent/LocalNow/5.png";
 import LN6 from "../img/portfolioContent/LocalNow/6.png";
 import LN7 from "../img/portfolioContent/LocalNow/7.jpg";
 
-import C91 from "../img/portfolioContent/Cloud9Software/1.png";
 import C92 from "../img/portfolioContent/Cloud9Software/2.png";
+
+import P1 from "../img/portfolioContent/PortfolioSite/P1.png";
+
+import H1 from "../img/portfolioContent/Hashibirokou/1.png";
+
 
 const PortfolioContents = [
   {
     Title: "Cloud9Software",
     URL: "https://cloud9.software/",
-    Description: "Full Suite Practice Management System for Dentists and Orthodontics. Complete MVC5 Web App with MSSQL as data storage. Front-end consisted of pure Javascript and CSS. Alternate app based on Silverlight. Invovled interfacing with hardware like printers and XRay machines",
+    Description: `Full Suite Practice Management System for Dentists and Orthodontics. Complete MVC5 Web App with MSSQL as data storage. 
+    Front-end consisted of pure Javascript and CSS. Alternate app based on Silverlight. Involved interfacing with hardware like printers and XRay machines`,
     Tags: ".NET Framework, C#, MVC5, Entity Framework, Telerik Reporting Services, MSSQL, Javascript, HTML5, CSS",
-    MainImage: C91,
-    Gallery: [C92]
+    MainImage: C92,
+    Gallery: []
   },
   {
     Title: "Local Now",
     URL: "https://localnow.com/",
-    Description: `A React-based web app (Next.js) that served video content, much like Hulu or Netflix. The niche that this fills is that it also offers an ongoing live-reel on the front page. It is supposed to be like TV.`,
+    Description: `A React-based web app (Next.js) that served video content, much like Hulu or Netflix. 
+    The niche that this fills is that it also offers an ongoing live-reel on the front page. It is supposed to be like TV.`,
     Tags: "React, AWS, S3, Microservices, Lambda, Auth0, MSSQL, ElasticSearch, Entity Framework, Angular",
     MainImage: LN1,
     Gallery: [ LN2, LN3, LN4, LN5, LN6, LN7 ]
+  },
+  {
+    Title: "This Site",
+    URL: "http://houstonguyen-portfolio-site.s3-website-us-east-1.amazonaws.com/",
+    Description: `This site is a simple boilerplate React app hosted out of an AWS S3 bucket as a static webpage. Deployments are handled automatically by 
+    a CodePipeline configuration.`,
+    Tags: "React, AWS, S3, CodePipeline",
+    MainImage: P1,
+    Gallery: [ ]
+  },
+  {
+    Title: "Hashibirokou",
+    URL: null,
+    Description: `This is a defunct background service that used the Twitter API to monitor Twitter and mine for posts, filling certain criteria, 
+    and process them using Google's Translation API. Lastly, it sent the processed data to a Discord server using Discord's API.`,
+    Tags: "Service, Google API, Twitter API, Discord API",
+    MainImage: H1,
+    Gallery: [ ]
   }
 ];
 

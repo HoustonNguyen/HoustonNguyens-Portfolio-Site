@@ -40,7 +40,8 @@ class About extends React.Component {
           Title: "Work",
           content:
             `I graduated from Kennesaw State University in 2016 with a B.S. in Computer Science. Right out of college, I worked for a company in the healthcare industry, providing tools and
-            other services to the Orthodonic and Dental Practice-domain. Nowadays, I am working on building out a new streaming platform for the latest news, updates, movies, and TV.
+            other services to the Orthodonic and Dental Practice-domain. Nowadays, I am working on building out a new streaming platform for the latest news, updates, movies, and TV. All the meanwhile,
+            I spend a good amount of time researching new tech for non-work purposes.
             Feel free to check out the work section for more details.`
         },
         {
@@ -56,12 +57,6 @@ class About extends React.Component {
           Title: "Interests",
           content:
             `I am a programmer by trade, but I also reserve a lot of interest for Fencing, wrestling, martial arts, Video FX and Editing, gaming, the study of the Japanese language, music, and digital illustration. Honestly, I will try almost anything. I love learning and trying new things.`
-        },
-        {
-          id: "About This Site",
-          Title: "About This Site",
-          content:
-            `This site is a pretty boilerplate example of a single-page application built in React. It is hosted in AWS. I have a few things I want to add to this, when I have time.`
         }
       ]
     };
