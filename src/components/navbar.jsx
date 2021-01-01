@@ -4,11 +4,18 @@ import $ from "jquery";
 import LogoNotTop from "../img/HueLogoAgainstBlackBackground.png";
 import LogoTop from "../img/HueLogoTransparent.png";
 
+const SocialLinks = {
+  "LinkedIn": "https://www.linkedin.com/in/houstonhuenguyen/",
+  "GitHub": "https://github.com/HoustonNguyen"
+};
+
+
 class Navbar extends React.Component {
   constructor() {
     super();
     this.state = {
-      logo: LogoTop
+      logo: LogoTop,
+      logoSize: "100px"
     };
   }
 
@@ -39,7 +46,7 @@ class Navbar extends React.Component {
         document
           .querySelector(".navbar-expand-md")
           .classList.remove("navbar-trans");
-        this.setState({ logo: LogoNotTop });
+        this.setState({ logo: LogoNotTop, logoSize: "50px" });
       } else {
         document
           .querySelector(".navbar-expand-md")
@@ -47,7 +54,7 @@ class Navbar extends React.Component {
         document
           .querySelector(".navbar-expand-md")
           .classList.remove("navbar-reduce");
-        this.setState({ logo: LogoTop });
+        this.setState({ logo: LogoTop, logoSize: "100px" });
       }
     });
 
@@ -90,7 +97,7 @@ class Navbar extends React.Component {
             <img
               src={this.state.logo}
               alt="logo"
-              style={{ maxWidth: "100px" }}
+              style={{ maxWidth: this.state.logoSize }}
             />
           </a>
           <button
@@ -111,6 +118,28 @@ class Navbar extends React.Component {
             id="navbarDefault"
           >
             <ul className="navbar-nav">
+              {/* <li>
+                <a
+                  href={SocialLinks.GitHub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ico-circle">
+                    <i className="ion-social-github"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={SocialLinks.LinkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ico-circle">
+                    <i className="ion-social-linkedin"></i>
+                  </span>
+                </a>
+              </li> */}
               <li className="nav-item">
                 <a className="nav-link js-scroll active" href="#home">
                   Home
@@ -129,6 +158,16 @@ class Navbar extends React.Component {
               <li className="nav-item">
                 <a className="nav-link js-scroll" href="#contact">
                   Contact
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link js-scroll active" href={"#" + SocialLinks.GitHub}>
+                  GitHub
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link js-scroll active" href={"#" + SocialLinks.LinkedIn}>
+                  LinkedIn
                 </a>
               </li>
             </ul>
