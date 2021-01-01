@@ -118,28 +118,6 @@ class Navbar extends React.Component {
             id="navbarDefault"
           >
             <ul className="navbar-nav">
-              {/* <li>
-                <a
-                  href={SocialLinks.GitHub}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="ico-circle">
-                    <i className="ion-social-github"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={SocialLinks.LinkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="ico-circle">
-                    <i className="ion-social-linkedin"></i>
-                  </span>
-                </a>
-              </li> */}
               <li className="nav-item">
                 <a className="nav-link js-scroll active" href="#home">
                   Home
@@ -161,12 +139,12 @@ class Navbar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link js-scroll active" href={"#" + SocialLinks.GitHub}>
+                <a className="nav-link js-scroll active" href={SocialLinks.GitHub}>
                   GitHub
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link js-scroll active" href={"#" + SocialLinks.LinkedIn}>
+                <a className="nav-link js-scroll active" href={SocialLinks.LinkedIn}>
                   LinkedIn
                 </a>
               </li>
