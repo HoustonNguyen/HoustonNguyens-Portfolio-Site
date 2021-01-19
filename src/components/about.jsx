@@ -39,10 +39,10 @@ class About extends React.Component {
           id: "Work",
           Title: "Work",
           content:
-            `I graduated from Kennesaw State University in 2016 with a B.S. in Computer Science. Right out of college, I worked for a company in the healthcare industry, providing tools and
-            other services to the Orthodonic and Dental Practice-domain. Nowadays, I am working on building out a new streaming platform for the latest news, updates, movies, and TV. All the meanwhile,
-            I spend a good amount of time researching new tech for non-work purposes.
-            Feel free to check out the work section for more details.`
+            `I graduated from Kennesaw State University in 2016 with a B.S. in Computer Science. Right out of college, I worked for a company in the Healthcare and Services domain.
+             Nowadays, I am working on building out a new streaming platform for the latest news, updates, movies, and TV.
+              All the meanwhile, I spend a good amount of time researching new tech for non-work purposes.
+             Feel free to check out the work section for more details.`
         },
         {
           id: "Aspirations",
@@ -50,13 +50,22 @@ class About extends React.Component {
           content:
             `My dream job would be working for the Walt Disney Company.
             Nothing motivates me more than feeling like I am a part of something that people can be excited about. And nothing is more satisfying than making an idea into reality, while maintaining excellence and professionalism.
-            My proudest moments as a developer is seeing a user's face brighten up over a fantastic looking UI or a convenient feature that they hadn't thought of. `
+            My proudest moments as a developer is seeing a user's face brighten up over a fantastic looking UI or a convenient feature that they hadn't thought of. My greatest desire is to use my knowledge, skills, and science to make
+            the lives of people convenient and enjoyable, even including developing tools that help other people do that.`
         },
         {
           id: "Interests",
           Title: "Interests",
           content:
             `I am a programmer by trade, but I also reserve a lot of interest for Fencing, wrestling, martial arts, Video FX and Editing, gaming, the study of the Japanese language, music, and digital illustration. Honestly, I will try almost anything. I love learning and trying new things.`
+        },
+        {
+          id: "Personality",
+          Title: "Personality",
+          content:
+            `I consider myself shy and mostly reserved, but without an inability to communicate and talk to others. I love being part of a team that can count on each other as well as themsselves.
+             I believe I am humble, but competant, or at least able to do what I need to do to get a job done. I know my strengths and limits and am not afraid to admit that I need help. And, of course, I
+             am always willing to lend my hand where it is desired.`
         }
       ]
     };
