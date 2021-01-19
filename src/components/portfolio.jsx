@@ -2,6 +2,7 @@ import React from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 //import stock
+import LocalNowAd from "../img/portfolioContent/LocalNow/LocalNowAd.png";
 import LN1 from "../img/portfolioContent/LocalNow/1.png";
 import LN2 from "../img/portfolioContent/LocalNow/2.png";
 import LN3 from "../img/portfolioContent/LocalNow/3.png";
@@ -11,6 +12,7 @@ import LN6 from "../img/portfolioContent/LocalNow/6.png";
 import LN7 from "../img/portfolioContent/LocalNow/7.jpg";
 
 import C92 from "../img/portfolioContent/Cloud9Software/2.png";
+import Cloud9Webpage from "../img/portfolioContent/Cloud9Software/Cloud9Webpage.png";
 
 import P1 from "../img/portfolioContent/PortfolioSite/P1.png";
 
@@ -35,11 +37,13 @@ const PortfolioContents = [
     are handled, and even how appointments and treatment history works. A lot of work went towards not only implementing features that dentists found useful, but also
     research and collaboration with obtaining these specifications.`,
     Tags: ".NET Framework, C#, MVC5, Entity Framework, Telerik Reporting Services, MSSQL, Javascript, HTML5, CSS",
+    MainImage: Cloud9Webpage,
     Gallery: []
   },
   {
     Title: "Cloud9Software Ceph",
     Description: `No Information provided.`,
+    MainImage: Cloud9Webpage,
     Gallery: []
   },
   {
@@ -51,6 +55,7 @@ const PortfolioContents = [
       images from competitive systems that did not want to share data). Lastly, the process heavily involved debugging and troubleshooting staff and customer issues to make sure
       that data integrity was preserved, including the finanial history for millions of patients.`,
     Tags: "MSSQL, Imaging, PostGres, MySQL, SQLLite",
+    MainImage: Cloud9Webpage,
     Gallery: []
   },
   {
@@ -68,7 +73,7 @@ const PortfolioContents = [
     Description: `A Microservice running in AWS Lambda, this is a tool that handles
     the transferrence of data between a content provider (ex: Lions Gate, Film Rise, MGM, etc) and Local Now's Content Management System, which is a third-party vendor that will not be named.
     This is an automated solution to rectified the data and assets coming from a studio and streamlined it in preparation for consumption and publishing on the front-facing app.`,
-    MainImage: null,
+    MainImage: LocalNowAd,
     Gallery: [ ],
     Tags: "AWS Lambda, AWS CodePipeline, AWS IAM, Micro-Services, Distributed Systems"
   },
@@ -76,7 +81,7 @@ const PortfolioContents = [
     Title: "VODLibrary Admin",
     URL: null,
     Description: `An internal web-application used by Local Now and The Weather Group's staff`,
-    MainImage: null,
+    MainImage: LocalNowAd,
     Gallery: [ ],
     Tags: "Angular 8, AWS CodePipeline, AWS EC2, AWS CloudFront, Auth0, PrimeNG, AWS Lambda, AWS S3, AWS IAM, AWS Secrets Manager"
   },
@@ -84,7 +89,7 @@ const PortfolioContents = [
     Title: "OTT Config and OTT CMS",
     URL: null,
     Description: `An internal web-application used by Local Now and The Weather Group's staff`,
-    MainImage: null,
+    MainImage: LocalNowAd,
     Gallery: [ ],
     Tags: "Angular, AWS CodePipeline, AWS EC2, AWS CloudFront, AWS IAM, AWS Lambda, AWS Dynamo"
   },
@@ -104,15 +109,6 @@ const PortfolioContents = [
     and process them using Google's Translation API. Lastly, it sent the processed data to a Discord server using Discord's API.`,
     Tags: "Service, Google API, Twitter API, Discord API",
     MainImage: H1,
-    Gallery: [ ]
-  },
-  {
-    Title: "Hashibirokou",
-    URL: null,
-    Description: `This is a defunct background service that used the Twitter API to monitor Twitter and mine for posts, filling certain criteria, 
-    and process them using Google's Translation API. Lastly, it sent the processed data to a Discord server using Discord's API.`,
-    Tags: "Service, Google API, Twitter API, Discord API",
-    MainImage: null,
     Gallery: [ ]
   }
 ];
