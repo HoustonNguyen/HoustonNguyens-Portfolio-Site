@@ -11,13 +11,24 @@ import LN5 from "../img/portfolioContent/LocalNow/5.png";
 import LN6 from "../img/portfolioContent/LocalNow/6.png";
 import LN7 from "../img/portfolioContent/LocalNow/7.jpg";
 
-import C92 from "../img/portfolioContent/Cloud9Software/2.png";
+import C9Schedule from "../img/portfolioContent/Cloud9Software/Schedule.png";
+import C9Ledger from "../img/portfolioContent/Cloud9Software/Ledger.jpg";
+import C9PostPayment from "../img/portfolioContent/Cloud9Software/PostPayment.jpg";
+import C9TreatmentCard from "../img/portfolioContent/Cloud9Software/TreatmentCard.jpg";
 import Cloud9Webpage from "../img/portfolioContent/Cloud9Software/Cloud9Webpage.png";
+import C9DentalChart from "../img/portfolioContent/Cloud9Software/DentalChart.jpg";
+import C9Imaging from "../img/portfolioContent/Cloud9Software/Imaging.jpg";
+
+import VLAppClient from "../img/portfolioContent/VodLibrary/AppClient.png"
+import VLAuth0SignIn from "../img/portfolioContent/VodLibrary/Auth0SignIn.png"
+import VLDashboard from "../img/portfolioContent/VodLibrary/Dashboard.png"
+import VLElasticsearchQueryBuilder1 from "../img/portfolioContent/VodLibrary/ElasticSearchQueryBuilder1.png"
+import VLElasticsearchQueryBuilder2 from "../img/portfolioContent/VodLibrary/ElasticSearchQueryBuilder2.png"
+import VLVideos from "../img/portfolioContent/VodLibrary/Videos.png"
 
 import P1 from "../img/portfolioContent/PortfolioSite/P1.png";
 
 import H1 from "../img/portfolioContent/Hashibirokou/1.png";
-
 
 const PortfolioContents = [
   {
@@ -26,8 +37,8 @@ const PortfolioContents = [
     Description: `Full Suite Practice Management Software for Orthodontics. Complete MVC5 Web App with MSSQL as data storage. 
     Front-end consisted of pure Javascript and CSS. Legacy app based on Silverlight 5. Involved interfacing with hardware like printers and XRay machines.`,
     Tags: ".NET Framework, C#, MVC5, Entity Framework, Telerik Reporting Services, MSSQL, Javascript, HTML5, CSS",
-    MainImage: C92,
-    Gallery: []
+    MainImage: C9Schedule,
+    Gallery: [C9Ledger, C9PostPayment, C9TreatmentCard]
   },
   {
     Title: "Cloud9Software Pediatric",
@@ -37,14 +48,8 @@ const PortfolioContents = [
     are handled, and even how appointments and treatment history works. A lot of work went towards not only implementing features that dentists found useful, but also
     research and collaboration with obtaining these specifications.`,
     Tags: ".NET Framework, C#, MVC5, Entity Framework, Telerik Reporting Services, MSSQL, Javascript, HTML5, CSS",
-    MainImage: Cloud9Webpage,
-    Gallery: []
-  },
-  {
-    Title: "Cloud9Software Ceph",
-    Description: `No Information provided.`,
-    MainImage: Cloud9Webpage,
-    Gallery: []
+    MainImage: C9DentalChart,
+    Gallery: [C9Imaging]
   },
   {
     Title: "Cloud9Software Conversion Suite",
@@ -81,8 +86,8 @@ const PortfolioContents = [
     Title: "VODLibrary Admin",
     URL: null,
     Description: `An internal web-application used by Local Now and The Weather Group's staff`,
-    MainImage: LocalNowAd,
-    Gallery: [ ],
+    MainImage: VLDashboard,
+    Gallery: [ VLAuth0SignIn, VLAppClient, VLVideos, VLElasticsearchQueryBuilder1, VLElasticsearchQueryBuilder2 ],
     Tags: "Angular 8, AWS CodePipeline, AWS EC2, AWS CloudFront, Auth0, PrimeNG, AWS Lambda, AWS S3, AWS IAM, AWS Secrets Manager"
   },
   {
@@ -137,7 +142,6 @@ class Portfolio extends React.Component {
                     <div className="work-img">
                       <img src={content.MainImage} alt="" className="img-fluid" />
                     </div>
-                    
                   </a>
                   <div className="work-content">
                       <div className="row">
@@ -158,6 +162,7 @@ class Portfolio extends React.Component {
                       <a key={uuidv4()}
                         href={image}
                         data-lightbox={"Gallery" + content.Title}
+                        data-title=""
                         style={{ display: "none" }}
                       >
                         jsx-a11y/anchor-has-content warning
