@@ -10,6 +10,7 @@ import LN4 from "../img/portfolioContent/LocalNow/4.png";
 import LN5 from "../img/portfolioContent/LocalNow/5.png";
 import LN6 from "../img/portfolioContent/LocalNow/6.png";
 import LN7 from "../img/portfolioContent/LocalNow/7.jpg";
+import LNGOneTap from "../img/portfolioContent/LocalNow/GoogleOneTap.png";
 
 import C9Schedule from "../img/portfolioContent/Cloud9Software/Schedule.png";
 import C9Ledger from "../img/portfolioContent/Cloud9Software/Ledger.jpg";
@@ -30,6 +31,13 @@ import P1 from "../img/portfolioContent/PortfolioSite/P1.png";
 
 import H1 from "../img/portfolioContent/Hashibirokou/1.png";
 
+class Image {
+  constructor(source, caption = null) {
+    this.Source = source;
+    this.Caption = caption;
+  }
+}
+
 const PortfolioContents = [
   {
     Title: "Cloud9Software Ortho",
@@ -37,8 +45,15 @@ const PortfolioContents = [
     Description: `Full Suite Practice Management Software for Orthodontics. Complete MVC5 Web App with MSSQL as data storage. 
     Front-end consisted of pure Javascript and CSS. Legacy app based on Silverlight 5. Involved interfacing with hardware like printers and XRay machines.`,
     Tags: ".NET Framework, C#, MVC5, Entity Framework, Telerik Reporting Services, MSSQL, Javascript, HTML5, CSS",
-    MainImage: C9Schedule,
-    Gallery: [C9Ledger, C9PostPayment, C9TreatmentCard]
+    MainImage: new Image(C9Schedule, "An example of the Appointment Schedule in Cloud9Software's Ortho Platform"),
+    Gallery: [
+      new Image(C9Ledger, "A single patient's ledger, showing financial history."), 
+      new Image(C9PostPayment, `A form with various elements that allow a user to post a one-off payment. The form's submission logic integrated with external 
+      vendors to faciliate the payment portal. In addition, there are protections in place to control erroneous behaviors regarding posting the transaction, 
+      including error handling and double posting. And finally, this feature integrated with SignalR to message other clients so that they know that a payment 
+      was posted, updating their data.`), 
+      new Image(C9TreatmentCard, ``)
+    ]
   },
   {
     Title: "Cloud9Software Pediatric",
@@ -48,8 +63,8 @@ const PortfolioContents = [
     are handled, and even how appointments and treatment history works. A lot of work went towards not only implementing features that dentists found useful, but also
     research and collaboration with obtaining these specifications.`,
     Tags: ".NET Framework, C#, MVC5, Entity Framework, Telerik Reporting Services, MSSQL, Javascript, HTML5, CSS",
-    MainImage: C9DentalChart,
-    Gallery: [C9Imaging]
+    MainImage: new Image(C9DentalChart),
+    Gallery: [ new Image(C9Imaging) ]
   },
   {
     Title: "Cloud9Software Conversion Suite",
@@ -60,7 +75,7 @@ const PortfolioContents = [
       images from competitive systems that did not want to share data). Lastly, the process heavily involved debugging and troubleshooting staff and customer issues to make sure
       that data integrity was preserved, including the finanial history for millions of patients.`,
     Tags: "MSSQL, Imaging, PostGres, MySQL, SQLLite",
-    MainImage: Cloud9Webpage,
+    MainImage: new Image(Cloud9Webpage),
     Gallery: []
   },
   {
@@ -69,8 +84,16 @@ const PortfolioContents = [
     Description: `A React-based web app (Next.js) that served video content, much like Hulu or Netflix. 
     The niche that this fills is that it also offers an ongoing live-reel on the front page. It is supposed to be like TV.`,
     Tags: "React, Next.js, Heroku",
-    MainImage: LN1,
-    Gallery: [ LN2, LN3, LN4, LN5, LN6, LN7 ]
+    MainImage: new Image(LN1, `The Front Page, which shows a currently running live feed/live roll segment for their locale`),
+    Gallery: [ 
+      new Image(LN2), 
+      new Image(LN3, `The movies dashboard`), 
+      new Image(LN4, `A modal that prompts the user to select their city/locale, so that they can be served localized content.`), 
+      new Image(LN5, `A view of a video/movie in mobile browser.`), 
+      new Image(LN6, `Video Playback as seen in a mobile browser window.`), 
+      new Image(LN7, `Video Playback in Full Screen Mode on Desktop.`), 
+      new Image(LNGOneTap, `A demonstration that shows integration with Google API Console and their One-Tap authentication flow.`) 
+    ]
   },
   {
     Title: "Local Now Ingestion Services",
@@ -78,7 +101,7 @@ const PortfolioContents = [
     Description: `A Microservice running in AWS Lambda, this is a tool that handles
     the transferrence of data between a content provider (ex: Lions Gate, Film Rise, MGM, etc) and Local Now's Content Management System, which is a third-party vendor that will not be named.
     This is an automated solution to rectified the data and assets coming from a studio and streamlined it in preparation for consumption and publishing on the front-facing app.`,
-    MainImage: LocalNowAd,
+    MainImage: new Image(LocalNowAd),
     Gallery: [ ],
     Tags: "AWS Lambda, AWS CodePipeline, AWS IAM, Micro-Services, Distributed Systems"
   },
@@ -86,25 +109,25 @@ const PortfolioContents = [
     Title: "VODLibrary Admin",
     URL: null,
     Description: `An internal web-application used by Local Now and The Weather Group's staff`,
-    MainImage: VLDashboard,
-    Gallery: [ VLAuth0SignIn, VLAppClient, VLVideos, VLElasticsearchQueryBuilder1, VLElasticsearchQueryBuilder2 ],
+    MainImage: new Image(VLDashboard),
+    Gallery: [ new Image(VLAuth0SignIn), new Image(VLAppClient), new Image(VLVideos), new Image(VLElasticsearchQueryBuilder1), new Image(VLElasticsearchQueryBuilder2) ],
     Tags: "Angular 8, AWS CodePipeline, AWS EC2, AWS CloudFront, Auth0, PrimeNG, AWS Lambda, AWS S3, AWS IAM, AWS Secrets Manager"
   },
   {
     Title: "OTT Config and OTT CMS",
     URL: null,
     Description: `An internal web-application used by Local Now and The Weather Group's staff`,
-    MainImage: LocalNowAd,
+    MainImage: new Image(LocalNowAd),
     Gallery: [ ],
     Tags: "Angular, AWS CodePipeline, AWS EC2, AWS CloudFront, AWS IAM, AWS Lambda, AWS Dynamo"
   },
   {
     Title: "This Site",
-    URL: "http://houstonguyen-portfolio-site.s3-website-us-east-1.amazonaws.com/",
+    URL: "https://github.com/HoustonNguyen/HoustonNguyens-Portfolio-Site",
     Description: `This site is a simple boilerplate React app hosted out of an AWS S3 bucket as a static webpage. Deployments are handled automatically by 
     a CodePipeline configuration.`,
     Tags: "React, AWS, S3, CodePipeline",
-    MainImage: P1,
+    MainImage: new Image(P1),
     Gallery: [ ]
   },
   {
@@ -113,7 +136,7 @@ const PortfolioContents = [
     Description: `This is a defunct background service that used the Twitter API to monitor Twitter and mine for posts, filling certain criteria, 
     and process them using Google's Translation API. Lastly, it sent the processed data to a Discord server using Discord's API.`,
     Tags: "Service, Google API, Twitter API, Discord API",
-    MainImage: H1,
+    MainImage: new Image(H1),
     Gallery: [ ]
   }
 ];
@@ -138,9 +161,9 @@ class Portfolio extends React.Component {
             {PortfolioContents.map((content) => { return (
               <div className="col-md-4" key={uuidv4()}>
                 <div className="work-box">
-                  <a href={content.MainImage} data-lightbox={"Gallery" + content.Title}>
+                  <a href={content.MainImage.Source} data-lightbox={"Gallery" + content.Title} data-title={content.MainImage.Caption}>
                     <div className="work-img">
-                      <img src={content.MainImage} alt="" className="img-fluid" />
+                      <img src={content.MainImage.Source} alt="" className="img-fluid" />
                     </div>
                   </a>
                   <div className="work-content">
@@ -160,11 +183,12 @@ class Portfolio extends React.Component {
                   {content.Gallery.map((image) => {
                     return (
                       <a key={uuidv4()}
-                        href={image}
+                        href={image.Source}
                         data-lightbox={"Gallery" + content.Title}
-                        data-title=""
+                        data-title={image.Caption}
                         style={{ display: "none" }}
                       >
+                        {image.Caption}
                         jsx-a11y/anchor-has-content warning
                       </a>
                     );
